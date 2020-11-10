@@ -6,13 +6,14 @@ const App = () => {
   const [ jobs, setJobs ] = useState([]);
   
   useEffect(() => {
-    setJobs(data);
+    return setJobs(data);
   }, [])
   
-  console.log(jobs)
-
   return (
     <div className="App">
+      <header className="bg-teal-500 mb-12">
+        <img src="/images/bg-header-desktop.svg"/>
+      </header>
       {
         jobs.length === 0 ? (
           <p>Jobs are fetching...</p>
